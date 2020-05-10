@@ -1,13 +1,11 @@
-﻿namespace Snake.Game.ConsoleApp
+﻿namespace Snake.Console.App
 {
     using System;
-    using System.Drawing;
-    using System.Threading.Tasks;
     using Microsoft.Extensions.DependencyInjection;
-    using Snake.Domain.Models;
+    using Snake.Console.Infrastructure;
+    using Snake.Domain;
     using Snake.Domain.Services;
     using Snake.Domain.Services.Implementations;
-    using Snake.Infrastructure;
 
     class Program
     {
@@ -27,6 +25,8 @@
                 .AddSingleton<INewPointFactory, NewPointFactory>()
                 .AddSingleton<ILoadSettingsStrategyFactory, LoadSettingsStrategyFactory>()
                 .AddSingleton<Game, Game>();
+
+            Console.Title = "Snake";
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
             var game = serviceProvider.GetService<Game>();

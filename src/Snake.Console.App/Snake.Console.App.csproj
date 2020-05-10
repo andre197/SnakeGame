@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -10,8 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Snake.Infrastructure\Snake.Infrastructure.csproj" />
-    <ProjectReference Include="..\Snake.Models\Snake.Domain.csproj" />
+    <ProjectReference Include="..\Snake.Console.Infrastructure\Snake.Console.Infrastructure.csproj" />
+    <ProjectReference Include="..\Snake.Domain\Snake.Domain.csproj" />
   </ItemGroup>
 
 </Project>

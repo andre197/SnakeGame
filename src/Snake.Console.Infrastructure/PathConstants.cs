@@ -1,4 +1,4 @@
-﻿namespace Snake.Infrastructure
+﻿namespace Snake.Console.Infrastructure
 {
     public class PathConstants
     {

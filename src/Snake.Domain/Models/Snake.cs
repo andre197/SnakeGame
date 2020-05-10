@@ -4,7 +4,7 @@
     using System.Drawing;
     using System.Linq;
     using Domain.Interfaces;
-    using global::Snake.Domain.Services;
+    using Domain.Services;
 
     public class Snake : IDrawable
     {

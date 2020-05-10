@@ -1,14 +1,14 @@
-﻿namespace Snake.Domain.Models
+﻿namespace Snake.Domain
 {
     using System;
     using System.Drawing;
     using System.Linq;
-    using System.Net.WebSockets;
     using System.Threading;
     using System.Threading.Tasks;
-    using Domain.Enums;
-    using Domain.PauseTokens;
-    using Domain.Services;
+    using Snake.Domain.Enums;
+    using Snake.Domain.Models;
+    using Snake.Domain.PauseTokens;
+    using Snake.Domain.Services;
 
     public class Game : IDisposable
     {

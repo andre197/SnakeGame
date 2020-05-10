@@ -3,11 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake.Domain", "Snake.Models\Snake.Domain.csproj", "{BAC338D5-0731-4F9B-8459-F007470E884F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake.Domain", "src\Snake.Domain\Snake.Domain.csproj", "{BAC338D5-0731-4F9B-8459-F007470E884F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake.Infrastructure", "Snake.Infrastructure\Snake.Infrastructure.csproj", "{532FC161-3BA6-4AB6-8789-6988C7A6805E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake.Console.Infrastructure", "src\Snake.Console.Infrastructure\Snake.Console.Infrastructure.csproj", "{532FC161-3BA6-4AB6-8789-6988C7A6805E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake.Game.ConsoleApp", "Snake.Game.ConsoleApp\Snake.Game.ConsoleApp.csproj", "{E2B378DE-7892-4350-B94E-1B3BAD218FDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake.Console.App", "src\Snake.Console.App\Snake.Console.App.csproj", "{E2B378DE-7892-4350-B94E-1B3BAD218FDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake.WinForms.App", "src\Snake.WinForms.App\Snake.WinForms.App.csproj", "{5B810151-6563-43AF-8191-F2A1699638E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{58E6F495-401A-4AC2-AFC8-F4A308EF0AE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{97DB500B-A69F-4505-985E-9E54EF98ACC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinForms", "WinForms", "{4894D3FA-9072-42FE-A60D-C60A152BCB23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.WinForms.Infrastructure", "src\Snake.WinForms.Infrastructure\Snake.WinForms.Infrastructure.csproj", "{149284C5-758A-40C2-BAF0-4DAC7319F161}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.WinForms.Database", "src\Snake.WinForms.Database\Snake.WinForms.Database.csproj", "{51305D80-2570-4D12-84D5-FA7556F40207}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +39,29 @@ Global
 		{E2B378DE-7892-4350-B94E-1B3BAD218FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2B378DE-7892-4350-B94E-1B3BAD218FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2B378DE-7892-4350-B94E-1B3BAD218FDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B810151-6563-43AF-8191-F2A1699638E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B810151-6563-43AF-8191-F2A1699638E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B810151-6563-43AF-8191-F2A1699638E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B810151-6563-43AF-8191-F2A1699638E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149284C5-758A-40C2-BAF0-4DAC7319F161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149284C5-758A-40C2-BAF0-4DAC7319F161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149284C5-758A-40C2-BAF0-4DAC7319F161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149284C5-758A-40C2-BAF0-4DAC7319F161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51305D80-2570-4D12-84D5-FA7556F40207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51305D80-2570-4D12-84D5-FA7556F40207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51305D80-2570-4D12-84D5-FA7556F40207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51305D80-2570-4D12-84D5-FA7556F40207}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BAC338D5-0731-4F9B-8459-F007470E884F} = {58E6F495-401A-4AC2-AFC8-F4A308EF0AE9}
+		{532FC161-3BA6-4AB6-8789-6988C7A6805E} = {97DB500B-A69F-4505-985E-9E54EF98ACC6}
+		{E2B378DE-7892-4350-B94E-1B3BAD218FDD} = {97DB500B-A69F-4505-985E-9E54EF98ACC6}
+		{5B810151-6563-43AF-8191-F2A1699638E2} = {4894D3FA-9072-42FE-A60D-C60A152BCB23}
+		{149284C5-758A-40C2-BAF0-4DAC7319F161} = {4894D3FA-9072-42FE-A60D-C60A152BCB23}
+		{51305D80-2570-4D12-84D5-FA7556F40207} = {4894D3FA-9072-42FE-A60D-C60A152BCB23}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4BAB8A8A-3E8F-45DF-A37F-6CCBA2B9DC1D}

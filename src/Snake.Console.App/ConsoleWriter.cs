@@ -1,4 +1,4 @@
-﻿namespace Snake.Game
+﻿namespace Snake.Console.App
 {
     using System;
     using System.Linq;

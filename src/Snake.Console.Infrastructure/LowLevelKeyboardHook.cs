@@ -1,4 +1,4 @@
-﻿namespace Snake.Infrastructure
+﻿namespace Snake.Console.Infrastructure
 {
     using System;
     using System.Diagnostics;
