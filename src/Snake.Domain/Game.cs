@@ -66,8 +66,12 @@
                 }
 
                 _writerService.WriteLine("Press enter to start. Type help to get help for the game!");
+
                 var input = _readerService.Read().ToLower();
-                var result = _loadSettingsStrategyFactory.GetStrategy(input).LoadSettings();
+                
+                var result = _loadSettingsStrategyFactory
+                    .GetStrategy(input)
+                    .LoadSettings();
                 if (!result.Loaded || result.GameSettings == null)
                 {
                     continue;
@@ -99,10 +103,7 @@
 
         private async Task BeginGame(GameSettings gameSettings, PauseToken pauseToken, CancellationToken cancellationToken)
         {
-            var snakeBody = gameSettings.Snake.Take(gameSettings.Snake.Count - 1);
-            var snakeHead = gameSettings.Snake.Last();
-
-            _snake = new Snake(snakeBody, snakeHead);
+            _snake = new Snake(gameSettings.Snake);
             _gameArea = new GameArea(new Point(0, 0), new Point(gameSettings.GameAreaSize.Width, gameSettings.GameAreaSize.Height));
 
             _gameArea.Draw(_writerService);

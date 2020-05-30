@@ -13,6 +13,10 @@
 
         private Point? _lastRemovedPoint;
 
+        public Snake(IEnumerable<Point> snakeCooridnates) 
+            : this(snakeCooridnates.Take(snakeCooridnates.Count() - 1), snakeCooridnates.Last())
+        { }
+
         public Snake(IEnumerable<Point> body, Point head)
         {
             _activePoints = new List<Point>(body);
